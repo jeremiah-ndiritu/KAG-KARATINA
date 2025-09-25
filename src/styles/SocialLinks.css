@@ -1,0 +1,17 @@
+.social-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.social-links a {
+  color: #fff; /* blue theme for KAG Karatina */
+  font-size: 1.5rem;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.social-links a:hover {
+  color: #ffd700; /* gold on hover */
+  transform: scale(1.2);
+}

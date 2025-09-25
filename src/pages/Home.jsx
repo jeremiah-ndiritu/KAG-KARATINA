@@ -1,25 +1,31 @@
 import SermonCard from "../components/SermonCard";
-
-export default function Home() {
+import TikTokEmbed from "../components/TikTokEmbed";
+import "../styles/Home.css";
+import Posts from "./Posts";
+export default function Home({ sermons, posts }) {
   return (
     <div className="page home">
+      <TikTokEmbed />
       <section className="hero">
-        <h2>Welcome to KAG Karatina</h2>
-        <p>Your spiritual home for worship, learning, and fellowship.</p>
+        <div className="hero-overly">
+          <h2>Welcome to KAG Karatina</h2>
+          <p>Where every soul matters</p>
+          <a href="/sermons" className="cta-button">
+            Watch Sermon
+          </a>
+        </div>
       </section>
 
       <section className="latest-sermons">
-        <h2>Latest Sermons</h2>
-        <SermonCard
-          title="Faith Over Fear"
-          speaker="Pastor John"
-          date="Sep 22, 2025"
-        />
-        <SermonCard
-          title="Walking in Love"
-          speaker="Pastor Mary"
-          date="Sep 15, 2025"
-        />
+        {sermons
+          .sort((a, b) => new Date(b.date) - new Date(a.date))
+          .map((s) => {
+            return <SermonCard key={s.id} sermon={s} />;
+          })}
+      </section>
+      <section className="posts">
+        <h3>Posts</h3>
+        <Posts posts={posts} />
       </section>
     </div>
   );

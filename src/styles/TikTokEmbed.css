@@ -1,0 +1,12 @@
+.tiktok-container {
+  position: relative;
+  width: 100%;
+  height: 75%;
+  max-width: 780px; /* desktop max width */
+  margin: 0 auto; /* center */
+}
+
+.tiktok-container iframe {
+  width: 100%;
+  height: 75%;
+}

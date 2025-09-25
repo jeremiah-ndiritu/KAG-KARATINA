@@ -1,0 +1,44 @@
+.hero {
+  position: relative;
+  background-image: url("/hero-bg.jpg"); /* Put a nice church image in /public folder */
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 74, 173, 0.6); /* semi-transparent blue overlay */
+  padding: 2rem;
+  text-align: center;
+  border-radius: 12px;
+  color: #fff;
+}
+
+.hero-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-overlay p {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #ffd700;
+  color: #004aad;
+  padding: 0.8rem 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+}

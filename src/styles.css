@@ -1,28 +1,14 @@
-body {
-  font-family: sans-serif;
+* {
   margin: 0;
   padding: 0;
-  background-color: #f8f9fa;
+  box-sizing: border-box;
+}
+body {
+  /* background-image: url("/kag profile-pic for tiktok.jpeg"); */
+  font-family: sans-serif;
+  max-width: 99.9vw;
+  margin: 0.4em;
   color: #333;
-}
-
-header.header {
-  background-color: #004aad;
-  color: #fff;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header nav a {
-  color: #fff;
-  margin-left: 1rem;
-  text-decoration: none;
-}
-
-header nav a:hover {
-  text-decoration: underline;
 }
 
 footer.footer {
