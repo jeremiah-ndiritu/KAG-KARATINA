@@ -3,6 +3,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+body,
+html,
+#root {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: sans-serif;
+}
 body {
   /* background-image: url("/kag profile-pic for tiktok.jpeg"); */
   font-family: sans-serif;
@@ -10,7 +17,10 @@ body {
   margin: 0.4em;
   color: #333;
 }
-
+.page {
+  max-width: 100vw; /* Never allow content to exceed viewport */
+  overflow-x: hidden;
+}
 footer.footer {
   background-color: #004aad;
   color: #fff;
