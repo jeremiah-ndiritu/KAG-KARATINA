@@ -1,6 +1,7 @@
 .post-card {
   background-color: #fff;
   border-radius: 12px;
+  border: 2px solid black;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   margin: 16px 0;
@@ -14,14 +15,15 @@
 
 .post-image,
 .post-video {
+  place-self: center;
   width: 100%;
   object-fit: cover;
   margin-bottom: 8px;
 }
 .post-image,
 .post-video video {
-  width: 100%;
-  max-width: 100%;
+  width: 60%;
+  max-width: 768px;
   height: auto;
   display: block;
 }
@@ -109,5 +111,10 @@
   }
   .post-content .content {
     font-size: 0.95rem;
+  }
+
+  .post-image,
+  .post-video video {
+    width: 100%;
   }
 }

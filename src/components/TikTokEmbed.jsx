@@ -15,6 +15,7 @@ export default function TikTokEmbed() {
 
   return (
     <div className="tiktok-container">
+      <h3>We are also in TikTok</h3>
       <blockquote
         className="tiktok-embed"
         cite="https://www.tiktok.com/@kingdom.embassy.karatina"

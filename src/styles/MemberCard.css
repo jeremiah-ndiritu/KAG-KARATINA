@@ -1,0 +1,53 @@
+.member-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.member-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #6366f1;
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.member-info h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #111827;
+}
+
+.nickname {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.member-meta {
+  margin: 0.2rem 0;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+.member-roles {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #9333ea;
+  font-weight: 500;
+}

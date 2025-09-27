@@ -1,3 +1,9 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
 .hero {
   position: relative;
   background-image: url("/kag profile-pic for tiktok.jpeg"); /* Put a nice church image in /public folder */
@@ -27,6 +33,18 @@
   font-size: 1.3rem;
   margin-bottom: 1.5rem;
 }
+.cta {
+  background-image: url("/bible image with a road bg.jpeg");
+  place-self: center;
+  width: 70%;
+  margin-bottom: 1em;
+}
+.cta p {
+  font-style: italic;
+}
+.cta p span {
+  font-weight: 800;
+}
 
 .cta-button {
   display: inline-block;
@@ -41,4 +59,10 @@
 
 .cta-button:hover {
   transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .cta {
+    width: 90%;
+  }
 }

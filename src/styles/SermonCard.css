@@ -76,6 +76,13 @@
 .social-tiktok:hover {
   background: #69c9d0;
 }
+.social-youtube {
+  background: #a10b0b;
+}
+
+.social-youtube:hover {
+  background: #f00;
+}
 
 .social-facebook {
   background: #1877f2;

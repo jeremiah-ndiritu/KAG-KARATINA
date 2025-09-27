@@ -1,41 +1,127 @@
 header.header {
-  background-color: #004aad;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 2000;
+  background: linear-gradient(90deg, #004aad, #2563eb);
   color: #fff;
-  padding: 1rem;
+  padding: 0.8rem 1.5rem;
+}
+.profiles {
+  width: 100%;
   display: flex;
-  max-width: 100%;
   justify-content: space-between;
   align-items: center;
 }
-header {
-  max-width: 100%;
-}
 
-header nav {
-  flex: 0 1 1em;
-}
-
-header nav a {
-  color: #fff;
-  margin-left: 1rem;
-  text-decoration: none;
-}
-
-header nav a:hover {
-  text-decoration: underline;
-}
-.church-profile {
+.church-profile,
+.member-profile {
   cursor: pointer;
   display: flex;
-  gap: 1em;
-  margin: 0;
-  max-width: 100px;
+  align-items: center;
+  gap: 0.6rem;
 }
-.church-profile h1 {
-  margin: 0;
-}
-.church-profile img {
-  width: 50px;
-  height: 50px;
+
+.church-profile img,
+.member-profile img {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
+}
+
+.church-profile h1,
+.member-profile h1 {
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: 600;
+}
+.member-profile {
+  background: linear-gradient(to right, rgb(61, 56, 56), navy);
+  flex-direction: row-reverse;
+}
+
+/* Nav links (desktop) */
+nav.nav {
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+nav.nav a {
+  color: #fff;
+  font-weight: 500;
+  font-size: 22px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+nav.nav a:hover {
+  color: #ffd43b;
+  border: 1px solid red;
+  padding: 2px 4px;
+  box-shadow: inset 2px 2px 25px black;
+}
+
+/* Hamburger */
+.menu-toggle {
+  display: block;
+  font-size: 1.6rem;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+/* Dropdown for extra links */
+nav .dropdown {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  flex-direction: column;
+  justify-content: space-around;
+  top: 45px;
+  right: 0.2em;
+  background: #004aad;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 150px;
+  gap: 1.4em;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+.dropdown a {
+  color: #fff;
+  text-decoration: none;
+}
+.dropdown a:hover {
+  color: #ffd43b;
+}
+.dropdown.show {
+  display: flex;
+  animation: menu-show-anim 0.3s ease forwards;
+}
+
+@keyframes menu-show-anim {
+  from {
+    transform: translateX(111px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Mobile behavior */
+@media (max-width: 768px) {
+  /* Show hamburger only on mobile */
+  .menu-toggle {
+    display: block;
+  }
+  header.header {
+    padding: 0;
+    height: 100px;
+  }
+  .widescreen-links {
+    display: none;
+  }
+  nav.nav {
+  }
 }

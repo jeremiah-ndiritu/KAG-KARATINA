@@ -7,6 +7,9 @@ import Sermons from "./pages/Sermons";
 import Events from "./pages/Events";
 import Contact from "./pages/Contact";
 import { useState, useEffect } from "react";
+import Login from "./components/Login";
+import SignUp from "./components/SignUp";
+import Members from "./components/Members";
 
 function App() {
   const [sermons, setSermons] = useState([]);
@@ -31,6 +34,9 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home sermons={sermons} posts={posts} />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/members" element={<Members />} />
           <Route path="/posts" element={<Posts posts={posts} />} />
           <Route path="/sermons" element={<Sermons sermons={sermons} />} />
           <Route path="/events" element={<Events />} />

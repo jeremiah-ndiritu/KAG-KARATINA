@@ -2,19 +2,20 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 body,
 html,
 #root {
-  width: 100%;
+  width: 100vw;
   overflow-x: hidden;
-  font-family: sans-serif;
 }
 body {
   /* background-image: url("/kag profile-pic for tiktok.jpeg"); */
-  font-family: sans-serif;
+
   max-width: 99.9vw;
   margin: 0.4em;
+  padding-top: 6vh;
   color: #333;
 }
 .page {
@@ -46,4 +47,14 @@ footer.footer {
   margin: 1rem 0;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 768px) {
+  body,
+  .page {
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    padding-top: 15.4vh;
+  }
 }
