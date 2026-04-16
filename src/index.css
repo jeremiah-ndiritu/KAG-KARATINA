@@ -45,6 +45,10 @@
     color-scheme: light;
 }
 
+[data-theme=dark]{
+    color-scheme: dark
+}
+
 @layer base {
     html {
         scroll-behavior: smooth;
