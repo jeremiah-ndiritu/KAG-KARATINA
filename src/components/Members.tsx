@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import MemberCard from "../components/MemberCard";
+import type{ Member } from "@/types/member";
 
 export default function Members() {
-  const [members, setMembers] = useState([]);
+  const [members, setMembers] = useState<Member[]>([]);
 
   useEffect(() => {
     const fetchMembers = async () => {
@@ -25,7 +26,7 @@ export default function Members() {
       {members.length > 0 ? (
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {members.map((m) => (
-            <MemberCard key={m.id} member={m} />
+            <MemberCard key={m.email} member={m} />
           ))}
         </div>
       ) : (

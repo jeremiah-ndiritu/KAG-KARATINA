@@ -1,5 +1,5 @@
 export interface Sermon {
-  id: Key | null | undefined;
+  id: string | null | undefined;
   title: string;
   speaker: string;
   date: string;
