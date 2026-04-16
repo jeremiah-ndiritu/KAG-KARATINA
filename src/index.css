@@ -42,7 +42,7 @@
 }
 
 :root {
-    color-scheme: light dark;
+    color-scheme: light;
 }
 
 @layer base {
