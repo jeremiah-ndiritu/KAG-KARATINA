@@ -66,7 +66,7 @@ export default function PostCard({
         <img
           src={`${import.meta.env.VITE_BACKEND_URL}${image}`}
           alt={title}
-          className="mb-6 h-64 w-full rounded-3xl object-cover shadow-inner"
+          className="mb-6 aspect-video w-full rounded-3xl object-cover shadow-inner bg-muted"
         />
       ) : null}
 
