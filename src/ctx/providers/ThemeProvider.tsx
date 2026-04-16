@@ -16,6 +16,7 @@ export default function ThemeProvider({ children }: { children: ReactNode }) {
     localStorage.setItem("site-theme", theme);
 
     root.style.colorScheme = theme;
+    root.dataset.theme = theme
   }, [theme]);
 
   return (
