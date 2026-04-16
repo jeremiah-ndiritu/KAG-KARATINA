@@ -23,51 +23,47 @@ export default function Header() {
       className="sticky top-0 z-40 border-b border-white/10 bg-surface/80 backdrop-blur-2xl shadow-sm"
       onClick={() => menuOpen && setMenuOpen(false)}
     >
-      <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-3 sm:px-6 sm:py-4">
-        <div className="flex items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <img
-              src="/kag-logo.jpg"
-              alt="KAG Karatina Logo"
-              className="h-12 w-12 rounded-3xl object-cover shadow-sm"
-            />
-            <div>
-              <h1 className="text-lg font-semibold text-heading">
-                KAG Karatina
-              </h1>
-              <p className="text-sm text-muted-foreground">House of prayer</p>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-2">
-            <ThemeToggle />
-            <button
-              type="button"
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border bg-muted text-surface-foreground transition hover:bg-muted/90 md:hidden"
-              onClick={(e) => {
-                e.stopPropagation();
-                setMenuOpen((prev) => !prev);
-              }}
-              aria-label="Toggle navigation menu"
-            >
-              ☰
-            </button>
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 sm:py-4">
+        {/* LEFT */}
+        <div className="flex items-center gap-3">
+          <img
+            src="/kag-logo.jpg"
+            alt="KAG Karatina Logo"
+            className="h-12 w-12 rounded-3xl object-cover shadow-sm"
+          />
+          <div>
+            <h1 className="text-lg font-semibold text-heading">KAG Karatina</h1>
+            <p className="text-sm text-muted-foreground">House of prayer</p>
           </div>
         </div>
 
-        <nav className="hidden items-center justify-between gap-4 md:flex">
-          <div className="flex flex-wrap items-center gap-3">
-            {links.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className="rounded-2xl px-4 py-2 text-sm font-medium text-surface-foreground transition hover:bg-muted hover:text-accent"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
+        {/* CENTER (nav) */}
+        <nav className="hidden md:flex items-center gap-3">
+          {links.map((link) => (
+            <Link
+              key={link.path}
+              to={link.path}
+              className="rounded-2xl px-4 py-2 text-sm font-medium text-surface-foreground transition hover:bg-muted hover:text-accent"
+            >
+              {link.label}
+            </Link>
+          ))}
         </nav>
+
+        {/* RIGHT */}
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <button
+            type="button"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border bg-muted text-surface-foreground transition hover:bg-muted/90 md:hidden"
+            onClick={(e) => {
+              e.stopPropagation();
+              setMenuOpen((prev) => !prev);
+            }}
+          >
+            ☰
+          </button>
+        </div>
       </div>
 
       <div
