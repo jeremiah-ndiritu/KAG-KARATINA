@@ -1,0 +1,93 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  animation: float-up 0.7s ease;
+}
+
+.hero {
+  position: relative;
+  background-image: url("/kag profile-pic for tiktok.jpeg");
+  background-size: cover;
+  background-position: center;
+  min-height: 72vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--color-overlay);
+}
+
+.hero-overlay {
+  position: relative;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(18px);
+  padding: 2rem;
+  text-align: ter;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: var(--color-surface-foreground);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.2);
+}
+
+.hero-overlay h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  margin-bottom: 1rem;
+  letter-spacing: -0.04em;
+}
+
+.hero-overlay p {
+  font-size: 1.15rem;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.cta {
+  background-image: url("/bible image with a road bg.jpeg");
+  background-size: cover;
+  background-position: center;
+  place-self: center;
+  width: 70%;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.cta p {
+  font-style: italic;
+  color: var(--color-surface-foreground);
+}
+
+.cta p span {
+  font-weight: 800;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: var(--color-accent-foreground);
+  padding: 0.9rem 2rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 9999px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 16px 34px rgba(59, 130, 246, 0.28);
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.32);
+}
+
+@media (max-width: 768px) {
+  .cta {
+    width: 90%;
+  }
+}

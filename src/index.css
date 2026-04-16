@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@theme {
+    /* Colors - Church themed with blue, white, purple */
+    --color-primary: light-dark(#7c3aed, #a855f7);
+    --color-primary-foreground: light-dark(#ffffff, #000000);
+
+    --color-accent: light-dark(#3b82f6, #1d4ed8);
+    --color-accent-foreground: light-dark(#ffffff, #ffffff);
+
+    --color-surface: light-dark(#ffffff, #0f172a);
+    --color-surface-foreground: light-dark(#111827, #f8fafc);
+
+    --color-heading: light-dark(#1e1b4b, #e0e7ff);
+    --color-heading-foreground: light-dark(#ffffff, #000000);
+
+    --color-muted: light-dark(#f8fafc, #1f2937);
+    --color-muted-foreground: light-dark(#4b5563, #cbd5e1);
+
+    --color-border: light-dark(#e5e7eb, #374151);
+    --color-input: light-dark(#ffffff, #111827);
+    --color-ring: light-dark(#c7d2fe, #818cf8);
+    --color-overlay: light-dark(rgba(124, 58, 237, 0.55), rgba(99, 102, 241, 0.55));
+    --color-glow: light-dark(rgba(124, 58, 237, 0.2), rgba(99, 102, 241, 0.2));
+
+    /* Fonts */
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'Fira Code', 'Monaco', monospace;
+
+    /* Spacing */
+    --radius-sm: 0.125rem;
+    --radius-md: 0.375rem;
+    --radius-lg: 0.5rem;
+    --radius-xl: 0.75rem;
+    --radius-2xl: 1rem;
+
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 8px 20px rgba(15, 23, 42, 0.08);
+    --shadow-lg: 0 24px 45px rgba(15, 23, 42, 0.12);
+    --shadow-xl: 0 30px 80px rgba(15, 23, 42, 0.16);
+}
+
+:root {
+    color-scheme: light dark;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: var(--font-sans);
+        background: radial-gradient(circle at top, rgba(124, 58, 237, 0.12), transparent 28%),
+            linear-gradient(180deg, var(--color-surface) 0%, var(--color-muted) 100%);
+        color: var(--color-surface-foreground);
+    }
+
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        background: radial-gradient(circle at top left, rgba(124, 58, 237, 0.08), transparent 20%),
+            radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.08), transparent 18%);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: var(--color-heading);
+    }
+
+    a {
+        color: inherit;
+    }
+}
+
+@keyframes float-up {
+    from {
+        transform: translateY(8px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes glow-pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(124, 58, 237, 0.18);
+    }
+
+    50% {
+        box-shadow: 0 0 40px 12px rgba(124, 58, 237, 0.08);
+    }
+}
