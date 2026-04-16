@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import MemberCard from "../components/MemberCard";
 import type{ Member } from "@/types/member";
+import { api } from "@/config/api";
 
 export default function Members() {
   const [members, setMembers] = useState<Member[]>([]);
@@ -8,11 +9,8 @@ export default function Members() {
   useEffect(() => {
     const fetchMembers = async () => {
       try {
-        const res = await fetch(
-          `${import.meta.env.VITE_BACKEND_URL}/api/members`,
-        );
-        const data = await res.json();
-        setMembers(data || []);
+        const res = await api.get(`/api/members`);
+        setMembers(res.data.members || []);
       } catch (err) {
         console.error("Error fetching members:", err);
       }
